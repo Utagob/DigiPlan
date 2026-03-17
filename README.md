@@ -1,1 +1,1 @@
-# DJ-Plan
+# DigiPlan
