@@ -1,0 +1,134 @@
+#headerSection{
+    background-color: rgb(189, 189, 189);
+    top: 0;
+    height: 50px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.pageContent{
+    display: flex;
+    flex-direction: row;
+}
+
+#currentDay{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(189, 189, 189);
+    flex: 70%;
+    height: 100%;
+    
+    margin: 25px;
+}
+
+.weatherSection{
+    padding: 10px;
+    padding-left: 30px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 750px;
+}
+
+#weatherData{
+    height: 50px;
+
+    background-color: rgb(148, 147, 147);
+}
+
+#weatherIcon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(148, 147, 147);
+     
+    align-self: right;
+}
+
+.dayDisplay{
+    width: 80%;
+
+    align-self: center;
+    justify-content: center;
+    display: flex;
+
+    background-color: rgb(233, 233, 233);
+}
+
+
+.eventContainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+
+    background-color: rgb(189, 189, 189);
+    
+    margin: 25px;
+}
+
+#eventTime{
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    padding: 10px;
+}
+
+#eventDescription{
+    display: flex;
+    flex: 30%;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+}
+
+#calendarSection{
+    display: flex;
+    flex-direction: column;
+
+    flex:30%;
+    height: 100%;
+    
+    margin: 25px;
+}
+
+.monthDisplay{
+    height: 100px;
+    padding: 10px;
+    
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+
+    background-color: rgb(189, 189, 189);
+}
+
+.calendarDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: fit-content;
+    padding: 10px;
+
+    background-color: rgb(189, 189, 189);
+}
+
+#addEventButton{
+    width: 95%;
+    height: 20px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
