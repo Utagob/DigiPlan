@@ -8,5 +8,5 @@ Nu este nevoie de instalare, accesati 'index.html'.
 
 ## Construit de:
 
-- Bogatu Alexei
-- Voljin Polina
+- Bogatu Alexei https://github.com/Utagob
+- Voljin Polina https://github.com/vjpolina
