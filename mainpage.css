@@ -43,8 +43,10 @@
 
 #weatherData{
     height: 50px;
-
     background-color: rgb(148, 147, 147);
+
+    font-size: 2em;
+    color: rgb(231, 231, 231);
 }
 
 #weatherIcon{
