@@ -96,7 +96,7 @@ body{
     overflow-y: scroll;
 }
 
-#event{
+.event{
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -105,14 +105,14 @@ body{
 }
 
 
-#eventTime{
+.eventTime{
     background-color: rgb(233, 233, 233);
     display: flex;
     padding: 10px;
     min-height: 20px;
 }
 
-#eventDescription{
+.eventDescription{
     display: flex;
     flex: 30%;
     background-color: rgb(233, 233, 233);
