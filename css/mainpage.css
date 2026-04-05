@@ -1,0 +1,18 @@
+#headerSection{
+    background-color: rgb(189, 189, 189);
+}
+
+#currentDay{
+    background-color: rgb(189, 189, 189);
+}
+
+.dayDisplay{
+    width: 80%;
+
+    align-self: center;
+    justify-content: center;
+    display: flex;
+
+    margin-top: 10px;
+    background-color: rgb(233, 233, 233);
+}

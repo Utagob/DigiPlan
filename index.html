@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="calendar.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/event.css">
     <title>DigiPlan</title>
-    <link rel="stylesheet" href="mainpage.css">
 </head>
 <body>
 
@@ -13,86 +16,55 @@
     <a>00:00, current-date-here</a>
 </div>
 
-    <br><br>
+<div class="weatherSection">
+    <a id="weatherData">there will be a weather API here, this is a place holder</a>
+</div>
 
-<section class="pageContent">
-
-<section id="currentDay">
-    <br><br>
-    <div class="weatherSection">
-        <a id="weatherData">there will be a weather API here, this is a place holder</a>
-    </div>
-
+<div id="currentDay">
     <div class="dayDisplay">
         This will be the current day, this is a place holder
     </div>
-
-    <div class="eventContainer">
-    
-    </div>
-    <br>
-
+    <div class="eventContainer"></div>
     <button id="addEventButton">Add Event</button>
-    <br>
-</section>
+</div>
 
-<br><br>
-
-<section id="calendarSection">
+<div id="calendarSection">
     <div class="monthDisplay">
         <h1>Month</h1>
     </div>
-    <br>
     <div class="calendarDisplay">
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate selected"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
-        </div>
-        <div class="calendarRow">
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
             <div class = "calendarDate"><p>X</p></div>
@@ -100,7 +72,7 @@
         </div>
     </div>
     <br><br>
-</section>
+</div>
 
 <script src="addevent.js"></script>
 <script src="weather.js"></script>
