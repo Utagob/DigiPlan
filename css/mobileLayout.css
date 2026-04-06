@@ -1,0 +1,59 @@
+@media (orientation: portrait){
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    margin: 0;
+}
+
+#headerSection{
+    grid-row: 1 / 2;
+    padding: 10px;
+}
+
+#calendarSection{
+    grid-row: 2 / 3;
+    justify-self: center;
+
+    width: 95%;
+    height: auto;
+}
+
+.calendarDisplay{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.weatherSection{
+    grid-row: 3 / 4;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 95%;
+    height: 200px;
+}
+
+#currentDay{
+    grid-row: 4 / 5;
+    justify-self: center;
+
+    width: 95%;
+    padding-bottom: 10px;
+}
+
+.dayDisplay{
+    justify-self: center;
+}
+
+#addEventButton{
+    align-self: center;
+    justify-self: center;
+
+    width: 91%;
+}
+}

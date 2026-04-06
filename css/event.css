@@ -1,0 +1,68 @@
+.eventContainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    background-color: rgb(189, 189, 189);
+    
+    margin: 25px;
+    padding: 20px;
+    
+    border: solid 1px black;
+
+    height: 485px;
+
+    overflow-y: scroll;
+}
+
+.event{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+.eventTime{
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    padding: 10px;
+    min-height: 20px;
+}
+
+.eventDescription{
+    display: flex;
+    flex: 30%;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+
+    height: fit-content;
+    min-height: 20px;
+    position: relative;
+
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    resize: nones;
+}
+
+#deleteEvent{
+    width: 10px;
+    height: 10px;
+
+    top: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+#addEventButton{
+    width: 95%;
+    height: 20px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
