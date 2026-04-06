@@ -1,5 +1,8 @@
 .weatherSection{
-    background-color: #cdcdcd;
+    background-color: #16404D;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #weatherData{
@@ -11,8 +14,9 @@
     height: auto;
     width: 30%;
     margin-left: 10px;
+    border-radius: 5px;
 
-    background-color: #949393;
+    background-color: #16404D;
 
     font-size: 1em;
     color: rgb(231, 231, 231);
@@ -21,9 +25,10 @@
 #weatherIcon{
     width: 90px;
     height: 90px;
-    background-color: #949393;
+    background-color: #16404D;
     margin-right: 10px;
     align-self: right;
+    border-radius: 5px;
 }
 
 #temp{
@@ -52,18 +57,21 @@
     height: 180px;
     width: 180px;
     margin-left: 3%;
+    border-radius: 5px;
 
-    background-color: #cdcdcd;
+    background-color: #16404D;
 
     font-size: 2em;
-    color: #444444;
+    color: #FBF5DD;
 }
 
 #weatherIcon{
     margin-right: 3%;
+    border-radius: 5px;
 
     width: 160px;
     height: 160px;
-    background-color: rgb(148, 147, 147);
+    
 }
+
 }

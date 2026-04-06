@@ -1,9 +1,11 @@
 .monthDisplay{
     display: flex;
     flex-direction: column;
-    background-color: #bdbdbd;
+    background-color: #A6CDC6;
     text-align: center;
     font-size: 30px;
+
+    border-radius: 5px;
 }
 
 .calendarDisplay{
@@ -14,22 +16,23 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #bdbdbd;
+    background-color: #A6CDC6;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .calendarDate{
     display: flex;
     flex-direction: column;
 
-    border: 1px solid #000000;
-    background-color: #ffffff;
+    border: 1px solid #63978d;
+    background-color: #f9fffe;
     border-radius: 15px;
     text-align: center;
     font-size: 15px;
 }
 
 .selected{
-    background-color: #272727;
-    color: #ffffff;
+    background-color: #63978d;
+    color: #ddfff9;
 }

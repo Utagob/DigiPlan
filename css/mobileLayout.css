@@ -12,12 +12,19 @@ body{
     padding: 10px;
 }
 
+.weatherSection{
+    border-radius: 5px;
+}
+
 #calendarSection{
     grid-row: 2 / 3;
     justify-self: center;
 
     width: 95%;
     height: auto;
+
+    border-radius: 10px;
+    
 }
 
 .calendarDisplay{
@@ -44,6 +51,8 @@ body{
 
     width: 95%;
     padding-bottom: 10px;
+
+    border-radius: 5px;
 }
 
 .dayDisplay{
@@ -55,5 +64,9 @@ body{
     justify-self: center;
 
     width: 91%;
+
+    border-radius: 5px;
+
+    font-family: Questrial, sans-serif;
 }
 }

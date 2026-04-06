@@ -1,9 +1,17 @@
+body{
+    background-color: #FBF5DD;
+    font-family: Questrial, sans-serif;
+}
+
 #headerSection{
-    background-color: rgb(189, 189, 189);
+    background-color: #A6CDC6;
 }
 
 #currentDay{
-    background-color: rgb(189, 189, 189);
+    background-color: #A6CDC6;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .dayDisplay{
@@ -14,5 +22,15 @@
     display: flex;
 
     margin-top: 10px;
+    padding: 7px;
     background-color: rgb(233, 233, 233);
+
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+
+.questrial-regular {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
