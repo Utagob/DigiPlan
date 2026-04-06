@@ -3,16 +3,17 @@
     gap: 10px;
     flex-direction: column;
 
-    background-color: rgb(189, 189, 189);
+    background-color: none;
     
     margin: 25px;
     padding: 20px;
     
-    border: solid 1px black;
+    border: none;
 
     height: 485px;
 
     overflow-y: scroll;
+    scrollbar-color: #16404D rgba(0,0,0, 0);
 }
 
 .event{
@@ -38,7 +39,7 @@
     padding: 10px;
 
     height: fit-content;
-    min-height: 20px;
+    min-height: 40px;
     position: relative;
 
     box-sizing: border-box;
@@ -54,15 +55,33 @@
     top: 5px;
     right: 5px;
     position: absolute;
+
+    z-index: 5;
+}
+
+#deleteEvent:hover{
+    cursor: pointer;
 }
 
 #addEventButton{
     width: 95%;
-    height: 20px;
+    height: 25px;
     padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
+
+    border: none;
+    background-color: #16404D;
+    color: rgb(233, 233, 233);
+    
 }
+
+#addEventButton:hover {
+        background-color: #0d2830;
+        cursor: pointer;
+    }
