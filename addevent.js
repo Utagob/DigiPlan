@@ -36,16 +36,17 @@ function loadEvents() {
 }
 
 
-
 function saveEvents() {
     const events = Array.from(eventSection.children).map(event => {
         const eventDescription = event.querySelector('.eventDescription');
         return eventDescription ? eventDescription.innerText : '';
     });
     localStorage.setItem('events', JSON.stringify(events));
+}
 
+function saveTime() {
     const timeArray = Array.from(eventSection.querySelectorAll('.eventTime')).map(input => {
-        return input.value;
+    return input.value;
     });
     console.log("Saving time array:", timeArray);
     localStorage.setItem('time', JSON.stringify(timeArray));
@@ -62,7 +63,7 @@ function addEvent(initialText = "Enter event description...", initialTime = "00:
     eventTime.className = "eventTime";
     eventTime.value = initialTime;
     eventTime.addEventListener("input", () => {
-        saveEvents();
+        saveTime();
     });
 
     let eventDescription = document.createElement("div");
@@ -80,6 +81,7 @@ function addEvent(initialText = "Enter event description...", initialTime = "00:
     deleteEvent.addEventListener("click", () => {
         eventSection.removeChild(newEvent);
         saveEvents();
+        saveTime();
     });
 
     eventDescription.setAttribute('contenteditable', 'true');
@@ -93,6 +95,6 @@ function addEvent(initialText = "Enter event description...", initialTime = "00:
 addEventButton.addEventListener("click", () =>{
     addEvent();
     saveEvents();
-
+    saveTime();
 });
 
