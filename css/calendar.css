@@ -19,6 +19,8 @@
     background-color: #A6CDC6;
     padding: 10px;
     border-radius: 5px;
+
+    z-index: 2;
 }
 
 .calendarDate{
@@ -32,7 +34,13 @@
     font-size: 15px;
 }
 
-.selected{
+.calendarDate:hover{
+    cursor: pointer;
+    background-color: #63978d;
+    color: #ddfff9;
+}
+
+#calendarDateselected{
     background-color: #63978d;
     color: #ddfff9;
 }
