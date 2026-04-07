@@ -1,7 +1,9 @@
 const eventSection = document.getElementsByClassName("eventContainer")[0];
 const addEventButton = document.getElementById("addEventButton");
 
-document.addEventListener("DOMContentLoaded", loadEvents);
+document.addEventListener("DOMContentLoaded", () => {
+    loadEvents();
+});
 
 function loadEvents() {
     const savedEvents = localStorage.getItem('events');
@@ -15,11 +17,25 @@ function loadEvents() {
         }
     }
 
+    const savedTime = localStorage.getItem('time');
+    let timeArray = [];
+
+    if (savedTime) {
+        try {
+            timeArray = JSON.parse(savedTime);
+        } catch (error) {
+            console.error("Error parsing time from localStorage:", error);
+        }
+    }
+
     eventSection.innerHTML = '';
-    eventsArray.forEach(eventContent => {
-        addEvent(eventContent);
+    eventsArray.forEach((eventContent, index) => {
+        addEvent(eventContent, timeArray[index] || "00:00");
     });
+
 }
+
+
 
 function saveEvents() {
     const events = Array.from(eventSection.children).map(event => {
@@ -27,15 +43,27 @@ function saveEvents() {
         return eventDescription ? eventDescription.innerText : '';
     });
     localStorage.setItem('events', JSON.stringify(events));
+
+    const timeArray = Array.from(eventSection.querySelectorAll('.eventTime')).map(input => {
+        return input.value;
+    });
+    console.log("Saving time array:", timeArray);
+    localStorage.setItem('time', JSON.stringify(timeArray));
 }
 
-function addEvent(initialText = "Enter event description...") {
+
+
+function addEvent(initialText = "Enter event description...", initialTime = "00:00") {
     let newEvent = document.createElement("div");
     newEvent.className = "event";
 
-    let eventTime = document.createElement("div");
+    let eventTime = document.createElement("input");
+    eventTime.type = "time";
     eventTime.className = "eventTime";
-    eventTime.innerText = "00:00"; 
+    eventTime.value = initialTime;
+    eventTime.addEventListener("input", () => {
+        saveEvents();
+    });
 
     let eventDescription = document.createElement("div");
     eventDescription.className = "eventDescription";
@@ -65,5 +93,6 @@ function addEvent(initialText = "Enter event description...") {
 addEventButton.addEventListener("click", () =>{
     addEvent();
     saveEvents();
+
 });
 
