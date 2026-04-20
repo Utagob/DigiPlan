@@ -48,7 +48,6 @@ function saveTime() {
     const timeArray = Array.from(eventSection.querySelectorAll('.eventTime')).map(input => {
     return input.value;
     });
-    console.log("Saving time array:", timeArray);
     localStorage.setItem('time', JSON.stringify(timeArray));
 }
 

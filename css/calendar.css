@@ -1,11 +1,38 @@
-.monthDisplay{
+#headerText{
+    font-family: "Questrial", sans-serif;
+    font-size: 1.5em;
+}
+
+.month-picker-wrapper{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+#monthInput::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#monthInput{
     display: flex;
     flex-direction: column;
-    background-color: #A6CDC6;
-    text-align: center;
-    font-size: 30px;
+    align-items: center;
+    justify-content: center;
 
+    font-family: "Questrial", sans-serif;
+    font-size: 1.3em;
+
+    background-color: #A6CDC6;
+    padding: 20px;
     border-radius: 5px;
+    width: max-content;
+    width: 100%;
 }
 
 .calendarDisplay{
@@ -36,8 +63,8 @@
 
 .calendarDate:hover{
     cursor: pointer;
-    background-color: #63978d;
-    color: #ddfff9;
+    background-color: #90ddce;
+    color: #000000;
 }
 
 #calendarDateselected{

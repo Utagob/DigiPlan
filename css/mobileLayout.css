@@ -10,6 +10,9 @@ body{
 #headerSection{
     grid-row: 1 / 2;
     padding: 10px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .weatherSection{
@@ -56,6 +59,7 @@ body{
 }
 
 .dayDisplay{
+    margin-top: 25px;
     justify-self: center;
 }
 
