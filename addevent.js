@@ -75,7 +75,7 @@ function addEvent(initialText = "Enter event description...", initialTime = "00:
 
     let deleteEvent= document.createElement("img");
     deleteEvent.id = "deleteEvent";
-    deleteEvent.src = "/images/exit.png";
+    deleteEvent.src = "images/exit.png";
 
     deleteEvent.addEventListener("click", () => {
         eventSection.removeChild(newEvent);

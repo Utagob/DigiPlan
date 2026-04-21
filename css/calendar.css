@@ -28,7 +28,6 @@
     font-family: "Questrial", sans-serif;
     font-size: 1.3em;
 
-    background-color: #A6CDC6;
     padding: 20px;
     border-radius: 5px;
     width: max-content;
@@ -43,7 +42,6 @@
     justify-content: center;
     align-items: center;
 
-    background-color: #A6CDC6;
     padding: 10px;
     border-radius: 5px;
 
@@ -54,8 +52,6 @@
     display: flex;
     flex-direction: column;
 
-    border: 1px solid #63978d;
-    background-color: #f9fffe;
     border-radius: 15px;
     text-align: center;
     font-size: 15px;
@@ -63,11 +59,4 @@
 
 .calendarDate:hover{
     cursor: pointer;
-    background-color: #90ddce;
-    color: #000000;
-}
-
-#calendarDateselected{
-    background-color: #63978d;
-    color: #ddfff9;
 }

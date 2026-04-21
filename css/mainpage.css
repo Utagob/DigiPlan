@@ -1,14 +1,30 @@
 body{
-    background-color: #FBF5DD;
     font-family: Questrial, sans-serif;
 }
 
-#headerSection{
-    background-color: #A6CDC6;
+#themeState{
+    height: 32px;
+    width: 32px;
+    
+
+    display: block;
+}
+
+#themeState:hover{
+    cursor: pointer;
+}
+
+#themeButton{
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    z-index: 10;
+
+    background-color: #11111100;
+    border: none;
 }
 
 #currentDay{
-    background-color: #A6CDC6;
 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -23,7 +39,6 @@ body{
 
     margin-top: 10px;
     padding: 7px;
-    background-color: rgb(233, 233, 233);
 
     border-radius: 5px;
     font-size: 1.3em;

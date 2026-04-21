@@ -13,7 +13,6 @@
     height: 485px;
 
     overflow-y: scroll;
-    scrollbar-color: #16404D rgba(0,0,0, 0);
 }
 
 .event{
@@ -28,7 +27,6 @@
 
 
 .eventTime{
-    background-color: rgb(233, 233, 233);
     display: flex;
     padding: 10px;
     height: 20px;
@@ -46,7 +44,6 @@
 .eventDescription{
     display: flex;
     flex: 30%;
-    background-color: rgb(233, 233, 233);
     padding: 10px;
 
     height: fit-content;
@@ -89,12 +86,9 @@
     align-self: center;
 
     border: none;
-    background-color: #16404D;
-    color: rgb(233, 233, 233);
     
 }
 
 #addEventButton:hover {
-        background-color: #0d2830;
         cursor: pointer;
     }
