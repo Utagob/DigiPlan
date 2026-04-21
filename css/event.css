@@ -26,12 +26,10 @@
     animation: slideIn 0.3s ease-out;
 }
 
-
 .eventTime{
     background-color: rgb(233, 233, 233);
     display: flex;
     padding: 10px;
-    height: 20px;
 
     font-family: "Questrial", sans-serif;
     border: none;
@@ -42,18 +40,34 @@
     cursor: pointer;
 }
 
-
-.eventDescription{
+.eventDescriptionBox{
     display: flex;
     flex: 30%;
     background-color: rgb(233, 233, 233);
-    padding: 10px;
+    padding: 3px;
+    
+    align-items: center;
+    justify-content: space-between;
 
     height: fit-content;
     min-height: 40px;
     position: relative;
 
     border-radius: 3px;
+}
+
+.eventDescription{
+    display: flex;
+    flex: 30%;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    padding-left: 10px;
+
+    height: fit-content;
+    min-height: 40px;
+    position: relative;
+
+    border: none;
 
     box-sizing: border-box;
     overflow-wrap: break-word;
@@ -61,15 +75,20 @@
     resize: none;
 }
 
-#deleteEvent{
-    width: 10px;
-    height: 10px;
+.deleteEventButton{
+    border: none;
+    background-color: rgb(233, 233, 233);
 
     top: 5px;
     right: 5px;
     position: absolute;
 
     z-index: 5;
+}
+
+#deleteEvent{
+    width: 10px;
+    height: 10px;
 }
 
 #deleteEvent:hover{
@@ -95,6 +114,6 @@
 }
 
 #addEventButton:hover {
-        background-color: #0d2830;
-        cursor: pointer;
-    }
+    background-color: #0d2830;
+    cursor: pointer;
+}
