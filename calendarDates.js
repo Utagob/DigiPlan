@@ -30,7 +30,7 @@ function updateSelectedDate() {
         const day = String(previousSelectedDay).padStart(2, '0');
         selectedDate = `${currentYear}-${month}-${day}`;
         dayDisplay.innerHTML = `Plans for  ${months[currentMonth]} ${previousSelectedDay}, ${currentYear}`;
-        
+        localStorage.setItem('selectedDate', selectedDate);
     } else {
         selectedDate = null;
     }
@@ -79,6 +79,7 @@ calendarDisplay.addEventListener("click", (event) => {
     previousSelectedCell = clickedCell;
     previousSelectedDay = parseInt(clickedCell.querySelector('p').innerHTML);
     updateSelectedDate();
+    filterEventsByDate();
 });
 
 document.addEventListener("click", (event) => {
@@ -89,6 +90,8 @@ document.addEventListener("click", (event) => {
         selectedDate = null;
     }
 });
+
+localStorage.removeItem('selectedDate');
 
 fetch(currentTime)
     .then(res => res.json())
@@ -115,4 +118,3 @@ fetch(currentTime)
     }
     updateSelectedDate();
 });
-
