@@ -1,0 +1,87 @@
+/* These are the main page colours */
+
+body{
+    background-color: #101831;
+}
+
+#headerSection{
+    background-color: #436392;
+    color: #dde9fb;
+}
+
+#currentDay{
+    background-color: #436392;
+}
+
+.dayDisplay{
+    background-color: #161e4d;
+    color: #dde9fb;
+}
+
+/* These are the colours for the calendar */
+
+.calendarDisplay{
+    background-color: #436392;
+}
+
+.calendarDate{
+    border: 1px solid #ddfbf78c;
+    background-color: #dde9fb;
+}
+
+.calendarDate:hover{
+    background-color: #90abdd;
+    color: #ffffff;
+}
+
+#calendarDateselected{
+    background-color: #485799;
+    color: #ddebff;
+}
+
+#monthInput{
+    background-color: #436392;
+    color: #dde9fb;
+    border: none;
+}
+
+/* These are the colours for events */
+
+.eventContainer{
+    scrollbar-color: #161c4d rgba(0,0,0, 0);
+}
+
+.eventTime{
+    background-color: rgb(233, 233, 233);
+}
+
+
+.eventDescription{
+    background-color: rgb(233, 233, 233);
+}
+
+#addEventButton{
+    background-color: #161e4d;
+    color: rgb(233, 233, 233);
+    
+}
+
+#addEventButton:hover {
+        background-color: #120d30;
+    }
+
+/* These are the colours for the weather section */
+
+.weatherSection{
+    background-color: #161e4d;
+}
+
+#weatherData{
+    color: #dde9fb;
+}
+
+
+@media (orientation: portrait){
+#weatherData{
+    color: #dde9fb;
+}}
