@@ -1,5 +1,4 @@
 const eventSection = document.getElementsByClassName("eventContainer")[0];
-const addEventButton = document.getElementById("addEventButton");
 
 class Event {
     constructor(date, description, time, index) {
@@ -72,6 +71,8 @@ function saveEvents() {
 }
 
 function addEvent(date, description, time) {
+    if (!date || date === 'null' || date === 'undefined') return;
+
     const index = events.getEvents().length;
     const event = new Event(date, description, time, index);
     events.addEvent(event);
@@ -114,10 +115,3 @@ function addEvent(date, description, time) {
 
     saveEvents();
 }
-
-addEventButton.addEventListener("click", () => {
-    let currentDate = localStorage.getItem('selectedDate');
-    addEvent(currentDate, "", "00:00");
-    filterEventsByDate();
-    generateCalendar(currentYear, currentMonth);
-});

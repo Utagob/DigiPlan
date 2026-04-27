@@ -39,6 +39,9 @@ function updateSelectedDate() {
 function generateCalendar(year, month) {
     calendarDisplay.innerHTML = '';
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const stored = localStorage.getItem('events');
+    const parsedEvents = stored ? JSON.parse(stored) : [];
+
     for (let i = 1; i <= daysInMonth; i++) {
         const dateCell = document.createElement("div");
         dateCell.className = "calendarDate";
@@ -62,8 +65,10 @@ function generateCalendar(year, month) {
             calendarEvent.setAttribute("class", "calendarDateEventBar");
             dateCell.appendChild(calendarEvent);
         }
+
         calendarDisplay.appendChild(dateCell);
     }
+
     if (previousSelectedDay <= daysInMonth) {
         const cells = calendarDisplay.querySelectorAll('.calendarDate');
         for (let cell of cells) {
