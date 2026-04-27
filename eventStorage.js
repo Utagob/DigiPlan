@@ -109,6 +109,7 @@ function addEvent(date, description, time) {
         eventSection.removeChild(box);
         events.removeEvent(index);
         saveEvents();
+        generateCalendar(currentYear, currentMonth);
     });
 
     saveEvents();
@@ -118,4 +119,5 @@ addEventButton.addEventListener("click", () => {
     let currentDate = localStorage.getItem('selectedDate');
     addEvent(currentDate, "", "00:00");
     filterEventsByDate();
+    generateCalendar(currentYear, currentMonth);
 });
