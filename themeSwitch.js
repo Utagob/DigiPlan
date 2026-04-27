@@ -3,7 +3,6 @@ const changeTheme = document.getElementById('themeButton');
 const themeState = document.getElementById('themeState');
 const styleElement = document.getElementById('colorTheme');
 
-// Function to apply the theme
 function applyTheme(theme) {
   if (!styleElement || !themeState) {
     console.error("One or more elements are missing in the DOM.");
@@ -21,20 +20,17 @@ function applyTheme(theme) {
   }
 }
 
-// Load the theme on page load
 window.addEventListener("load", () => {
   const savedTheme = localStorage.getItem("theme") || "day"; // Default to day theme
   applyTheme(savedTheme);
 });
 
-// Function to switch the theme
 function switchTheme() {
   const newTheme = currentState ? "day" : "night";
   applyTheme(newTheme);
   localStorage.setItem("theme", newTheme);
 }
 
-// Add event listener to the theme button
 if (changeTheme) {
   changeTheme.addEventListener('click', switchTheme);
 } else {
