@@ -46,11 +46,21 @@ function generateCalendar(year, month) {
         const dateCell = document.createElement("div");
         dateCell.className = "calendarDate";
         dateCell.innerHTML = `<p>${i}</p>`;
-
-        const dayString = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-        const hasEvent = parsedEvents.some(event => event.date === dayString);
-
-        if (hasEvent) {
+        let event = false;
+        const stored = localStorage.getItem('events');
+        if (stored) {
+        const parsed = JSON.parse(stored);
+            parsed.forEach(ev => {
+                if(parseInt(ev.date.substr(0, 4)) === year){
+                    if(parseInt(ev.date.substr(5, 2)) === month + 1){
+                        if(parseInt(ev.date.substr(8, 2)) === i){
+                            event = true;
+                        }      
+                    }
+                }
+            });
+        }
+        if(event){
             const calendarEvent = document.createElement('div');
             calendarEvent.setAttribute("class", "calendarDateEventBar");
             dateCell.appendChild(calendarEvent);
