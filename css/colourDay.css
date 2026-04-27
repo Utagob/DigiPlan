@@ -37,6 +37,10 @@ body{
     color: #ddfff9;
 }
 
+.calendarDateEventBar{
+    background-color: #63978d;
+}
+
 #monthInput{
     background-color: #A6CDC6;
 }

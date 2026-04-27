@@ -1,4 +1,4 @@
-const currentTime = "https://time.now/developer/api/timezone/Europe/Chisinau";
+const currentTime = "https://timeapi.io/api/time/current/zone?timeZone=Europe/Chisinau";
 
 const headerSection = document.querySelector("#headerText");
 const calendarDisplay = document.querySelector(".calendarDisplay");
@@ -43,6 +43,21 @@ function generateCalendar(year, month) {
         const dateCell = document.createElement("div");
         dateCell.className = "calendarDate";
         dateCell.innerHTML = `<p>${i}</p>`;
+        let event = false;
+        const stored = localStorage.getItem('events');
+        if (stored) {
+        const parsed = JSON.parse(stored);
+            parsed.forEach(ev => {
+                if(Number(ev.date.substr(8, 2)) === i){
+                    event = true;
+                }
+            });
+        }
+        if(event){
+            const calendarEvent = document.createElement('div');
+            calendarEvent.setAttribute("class", "calendarDateEventBar");
+            dateCell.appendChild(calendarEvent);
+        }
         calendarDisplay.appendChild(dateCell);
     }
     if (previousSelectedDay <= daysInMonth) {
@@ -96,7 +111,7 @@ localStorage.removeItem('selectedDate');
 fetch(currentTime)
     .then(res => res.json())
     .then(data => {
-    let time = data.datetime;
+    let time = data.dateTime;
     
     let year = parseInt(time.substr(0, 4));
     let monthIndex = parseInt(time.substr(5, 2)) - 1;
@@ -117,4 +132,5 @@ fetch(currentTime)
         }
     }
     updateSelectedDate();
+    filterEventsByDate();
 });
