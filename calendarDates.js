@@ -48,8 +48,12 @@ function generateCalendar(year, month) {
         if (stored) {
         const parsed = JSON.parse(stored);
             parsed.forEach(ev => {
-                if(Number(ev.date.substr(8, 2)) === i){
-                    event = true;
+                if(parseInt(ev.date.substr(0, 4)) === year){
+                    if(parseInt(ev.date.substr(5, 2)) === month + 1){
+                        if(parseInt(ev.date.substr(8, 2)) === i){
+                            event = true;
+                        }      
+                    }
                 }
             });
         }
