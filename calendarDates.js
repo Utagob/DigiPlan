@@ -39,27 +39,26 @@ function updateSelectedDate() {
 function generateCalendar(year, month) {
     calendarDisplay.innerHTML = '';
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const stored = localStorage.getItem('events');
+    const parsedEvents = stored ? JSON.parse(stored) : [];
+
     for (let i = 1; i <= daysInMonth; i++) {
         const dateCell = document.createElement("div");
         dateCell.className = "calendarDate";
         dateCell.innerHTML = `<p>${i}</p>`;
-        let event = false;
-        const stored = localStorage.getItem('events');
-        if (stored) {
-        const parsed = JSON.parse(stored);
-            parsed.forEach(ev => {
-                if(Number(ev.date.substr(8, 2)) === i){
-                    event = true;
-                }
-            });
-        }
-        if(event){
+
+        const dayString = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+        const hasEvent = parsedEvents.some(event => event.date === dayString);
+
+        if (hasEvent) {
             const calendarEvent = document.createElement('div');
             calendarEvent.setAttribute("class", "calendarDateEventBar");
             dateCell.appendChild(calendarEvent);
         }
+
         calendarDisplay.appendChild(dateCell);
     }
+
     if (previousSelectedDay <= daysInMonth) {
         const cells = calendarDisplay.querySelectorAll('.calendarDate');
         for (let cell of cells) {

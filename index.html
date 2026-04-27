@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/desktopLayout.css">
     <link rel="stylesheet" href="css/mobileLayout.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/popup.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,9 +46,26 @@
     <br><br>
 </div>
 
+<div id="eventPopup" class="popup hidden">
+  <div class="popup-content">
+    <h2>Add Event</h2>
+    <label for="eventTime">Time:</label>
+    <input type="time" id="eventTime">
+
+    <label for="eventDescription">Description:</label>
+    <textarea id="eventDescription" rows="3"></textarea>
+
+    <div class="popup-actions">
+      <button id="saveEventButton">Save</button>
+      <button id="cancelEventButton">Cancel</button>
+    </div>
+  </div>
+</div>
+
 <script src="calendarDates.js"></script>
 <script src="themeSwitch.js"></script>
 <script src="eventStorage.js"></script>
+<script src="popup.js"></script>
 <script src="weather.js"></script>
 </body>
 </html>
