@@ -1,41 +1,42 @@
 let currentState = true;
-let changeTheme = document.getElementById('themeButton');
+const changeTheme = document.getElementById('themeButton');
+const themeState = document.getElementById('themeState');
+const styleElement = document.getElementById('colorTheme');
 
-window.addEventListener("load", () => {
-  const theme = localStorage.getItem("theme");
-  console.log("theme: ", theme);
-
-  const themeState = document.getElementById('themeState');
-  const styleElement = document.getElementById('colorTheme');
-
-  if (!themeState || !styleElement) {
+// Function to apply the theme
+function applyTheme(theme) {
+  if (!styleElement || !themeState) {
     console.error("One or more elements are missing in the DOM.");
     return;
   }
 
   if (theme === 'night') {
-    styleElement.href = "colorNight.css";
+    styleElement.href = "css/colourNight.css";
     themeState.src = 'images/sun.png';
+    currentState = true;
   } else {
-    styleElement.href = "colorDay.css";
+    styleElement.href = "css/colourDay.css";
     themeState.src = 'images/night.png';
+    currentState = false;
   }
-});
-
-function switchTheme() {
-    if (currentState) {
-        document.getElementById('colorTheme').href = "colorNight.css";
-        document.getElementById('themeState').src='images/sun.png';
-        localStorage.setItem("theme", "night");
-    } 
-    else{
-        document.getElementById('colorTheme').href = "colorDay.css";
-        document.getElementById('themeState').src='images/night.png';
-        localStorage.setItem("theme", "day");
-    }
-    currentState = !currentState;
 }
 
+// Load the theme on page load
+window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("theme") || "day"; // Default to day theme
+  applyTheme(savedTheme);
+});
+
+// Function to switch the theme
+function switchTheme() {
+  const newTheme = currentState ? "day" : "night";
+  applyTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+}
+
+// Add event listener to the theme button
 if (changeTheme) {
-    changeTheme.addEventListener('click', switchTheme);
+  changeTheme.addEventListener('click', switchTheme);
+} else {
+  console.error("Theme button is missing in the DOM.");
 }
