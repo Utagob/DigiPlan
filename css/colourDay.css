@@ -45,6 +45,10 @@ body{
     background-color: #A6CDC6;
 }
 
+#monthInput::-webkit-calendar-picker-indicator{
+    filter: invert(0);
+}
+
 /* These are the colours for events */
 
 .eventContainer{

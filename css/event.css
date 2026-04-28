@@ -29,6 +29,9 @@
     display: flex;
     padding: 10px;
 
+    align-items: center;
+    justify-content: center;
+
     font-family: "Questrial", sans-serif;
     border: none;
     border-radius: 3px;
@@ -45,7 +48,7 @@
     padding: 3px;
     
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     height: fit-content;
     min-height: 40px;
@@ -110,6 +113,5 @@
 }
 
 #addEventButton:hover {
-    background-color: #0d2830;
     cursor: pointer;
 }

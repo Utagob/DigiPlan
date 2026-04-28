@@ -49,6 +49,10 @@ body{
     border: none;
 }
 
+#monthInput::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
 /* These are the colours for events */
 
 .eventContainer{
@@ -71,8 +75,8 @@ body{
 }
 
 #addEventButton:hover {
-        background-color: #120d30;
-    }
+    background-color: #11173a;
+}
 
 /* These are the colours for the weather section */
 
